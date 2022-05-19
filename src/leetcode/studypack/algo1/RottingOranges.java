@@ -6,40 +6,43 @@ import java.util.Queue;
 // Problem Link - https://leetcode.com/problems/rotting-oranges/
 public class RottingOranges {
     public int orangesRotting(int[][] grid) {
-        if(grid == null || grid.length == 0) return 0;
+        int minTime = 0;
         int rows = grid.length;
         int cols = grid[0].length;
-        Queue<int[]> queue = new LinkedList<>();
-        int count_fresh = 0;
-        for(int i = 0 ; i < rows ; i++) {
-            for(int j = 0 ; j < cols ; j++) {
-                if(grid[i][j] == 2) {
-                    queue.offer(new int[]{i , j});
-                }
-                else if(grid[i][j] == 1) {
-                    count_fresh++;
-                }
-            }
-        }
-        if(count_fresh == 0) return 0;
-        int count = 0;
-        int[][] dirs = {{1,0},{-1,0},{0,1},{0,-1}};
 
-        while(!queue.isEmpty()) {
-            ++count;
-            int size = queue.size();
-            for(int i = 0 ; i < size ; i++) {
-                int[] point = queue.poll();
-                for(int dir[] : dirs) {
-                    int x = point[0] + dir[0];
-                    int y = point[1] + dir[1];
-                    if(x < 0 || y < 0 || x >= rows || y >= cols || grid[x][y] == 0 || grid[x][y] == 2) continue;
-                    grid[x][y] = 2;
-                    queue.offer(new int[]{x , y});
-                    count_fresh--;
+        Queue<int[]> queue = new LinkedList<>();
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (grid[i][j] == 2) {
+                    queue.offer(new int[] {i, j});
                 }
             }
         }
-        return count_fresh == 0 ? count-1 : -1;
+
+        int[][] dirs = {{-1,0}, {1, 0}, {0, -1}, {0,1}};
+        while(!queue.isEmpty()) {
+            int size = queue.size();
+            boolean rotten = false;
+            for(int i=0; i<size; i++) {
+                int[] cell = queue.poll();
+                for(int[] d : dirs) {
+                    int r = cell[0] + d[0];
+                    int c = cell[1] + d[1];
+                    if(r<0 || c<0 || r>=rows || c>=cols || grid[r][c]!=1) continue;
+
+                    grid[r][c] = 2;
+                    rotten = true;
+                    queue.offer(new int[] {r, c});
+                }
+            }
+            if(rotten) minTime++;
+        }
+
+        for (int[] ints : grid) {
+            for (int j = 0; j < cols; j++) {
+                if (ints[j] == 1) return -1;
+            }
+        }
+        return minTime;
     }
 }
