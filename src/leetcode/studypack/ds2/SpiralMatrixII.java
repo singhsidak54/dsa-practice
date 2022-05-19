@@ -1,6 +1,6 @@
 package ds2;
 
-public class SquareMatrixII {
+public class SpiralMatrixII {
     public int[][] generateMatrix(int n) {
         int[][] result = new int[n][n];
         int layers = (n + 1) / 2;
