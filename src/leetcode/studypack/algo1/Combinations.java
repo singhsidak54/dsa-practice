@@ -19,7 +19,7 @@ public class Combinations {
         }
     }
     
-    public List<List<Integer>> combine(int n, int k) {
+    public static List<List<Integer>> combine(int n, int k) {
         List<List<Integer>> result = new ArrayList<>();
         combineHelper(result, new ArrayList<>(), 1, k, n);
         return result;

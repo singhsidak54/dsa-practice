@@ -2,7 +2,7 @@ package leetcode.studypack.algo1;
 
 // Problem Link - https://leetcode.com/problems/house-robber/
 public class HouseRobber {
-    public int rob(int[] nums) {
+    public static int rob(int[] nums) {
         int[] dp = new int[nums.length];
         dp[0] = nums[0];
         if(nums.length == 1) return dp[0];
