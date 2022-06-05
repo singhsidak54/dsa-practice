@@ -1,4 +1,4 @@
-package leetcode.studypack.ds1;
+package ds1;
 
 // Problem Link - https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/
 public class LCAOfABST {
