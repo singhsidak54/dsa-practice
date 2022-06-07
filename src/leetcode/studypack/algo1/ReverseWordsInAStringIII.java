@@ -1,4 +1,4 @@
-package leetcode.studypack.algo1;
+package algo1;
 
 // Problem Link - https://leetcode.com/problems/reverse-words-in-a-string-iii/
 public class ReverseWordsInAStringIII {

@@ -1,4 +1,4 @@
-package leetcode.studypack.ds1;
+package ds1;
 
 // Problem Link - https://leetcode.com/problems/merge-two-sorted-lists/
 public class MergeTwoSortedLists {

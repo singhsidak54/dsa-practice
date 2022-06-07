@@ -1,4 +1,4 @@
-package leetcode.studypack.algo1;
+package algo1;
 
 public class SearchInsert {
     public static int searchInsert(int[] nums, int target) {

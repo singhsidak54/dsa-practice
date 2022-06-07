@@ -1,4 +1,4 @@
-package leetcode.studypack.algo1;
+package algo1;
 
 import java.util.ArrayList;
 import java.util.List;

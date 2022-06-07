@@ -1,4 +1,4 @@
-package leetcode.studypack.algo1;
+package algo1;
 
 // Problem Link - https://leetcode.com/problems/merge-two-binary-trees/
 class TreeNode {

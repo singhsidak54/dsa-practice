@@ -1,4 +1,4 @@
-package leetcode.studypack.ds1;
+package ds1;
 
 // Problem Link - https://leetcode.com/problems/search-in-a-binary-search-tree/
 public class SearchInABinarySearchTree {

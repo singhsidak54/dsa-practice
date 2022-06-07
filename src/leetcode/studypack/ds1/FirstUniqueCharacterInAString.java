@@ -1,4 +1,4 @@
-package leetcode.studypack.ds1;
+package ds1;
 
 import java.util.HashMap;
 
