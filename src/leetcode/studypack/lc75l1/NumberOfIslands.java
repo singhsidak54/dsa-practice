@@ -5,7 +5,6 @@ public class NumberOfIslands {
         if(r == grid.length) return;
         if(c == grid[r].length) return;
 
-        grid[r][c] = '0';
         int[][] dirs = {{1,0}, {0, 1}, {-1,0}, {0,-1}};
         for(int[] dir : dirs) {
             int newR = r + dir[0];
@@ -26,6 +25,7 @@ public class NumberOfIslands {
             for(int j=0; j<n; j++) {
                 if(grid[i][j] == '1') {
                     islands++;
+                    grid[i][j] = '0';
                     visit(grid, i, j);
                 }
             }
