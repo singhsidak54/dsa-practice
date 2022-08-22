@@ -24,6 +24,6 @@ public class FindTheStudentThatWillReplaceTheChalk {
             }
         }
 
-        return l;
+        return temp[l] == t ? l + 1 : l;
     }
 }

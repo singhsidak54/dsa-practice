@@ -56,6 +56,19 @@ public class FindKClosestElements {
         return Arrays.stream(arr, start, start + k).boxed().collect(Collectors.toList());
     }
 
+    public List<Integer> findClosestElements3(int[] arr, int k, int x) {
+        int l = 0, r = arr.length - k, m;
+        while (l < r) {
+            m = l + (r - l)/2;
+            if(x - arr[m] > arr[m + k] - x) {
+                l = m + 1;
+            } else {
+                r = m;
+            }
+        }
+
+        return Arrays.stream(arr, l, l + k).boxed().collect(Collectors.toList());
+    }
     public static void main(String[] args) {
         System.out.println(findClosestElements2(new int[] {1}, 1, 0));
     }

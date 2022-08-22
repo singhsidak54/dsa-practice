@@ -17,4 +17,37 @@ public class MinimumSizeSubarraySum {
 
         return minLen == Integer.MAX_VALUE ? 0 : minLen;
     }
+
+    public int binarySearchJustGreater(int[] nums, int target) {
+        int l=0, h = nums.length, m;
+        while (l < h) {
+            m = l + (h - l)/2;
+            if(nums[m] < target) {
+                l = m + 1;
+            } else {
+                h = m;
+            }
+        }
+
+        return l;
+    }
+
+    public int minSubArrayLen2(int target, int[] nums) {
+        int[] sums = new int[nums.length + 1];
+
+        for(int i=1; i<=nums.length; i++) {
+            sums[i] = sums[i - 1] + nums[i - 1];
+        }
+        int minLen = Integer.MAX_VALUE;
+
+        for(int i=1; i<sums.length; i++) {
+            int newTarget = target + sums[i - 1];
+            int justGreaterIndex = binarySearchJustGreater(sums, newTarget);
+            if(justGreaterIndex != sums.length) {
+                minLen = Math.min(minLen, justGreaterIndex - i + 1);
+            }
+        }
+
+        return minLen == Integer.MAX_VALUE ? 0 : minLen;
+    }
 }

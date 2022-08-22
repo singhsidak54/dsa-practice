@@ -48,5 +48,6 @@ public class ValidTriangleNumber {
             }
         }
 
-        return start;    }
+        return start;
+    }
 }
