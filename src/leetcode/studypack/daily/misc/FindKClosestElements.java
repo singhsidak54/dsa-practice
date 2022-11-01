@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 class ListNode {
     int val;

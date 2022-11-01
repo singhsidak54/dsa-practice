@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 import java.util.HashSet;
 import java.util.Set;

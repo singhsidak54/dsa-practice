@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 public class ConcatenationOfConsecutiveBinaryNumbers {
     public int concatenatedBinary(int n) {

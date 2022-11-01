@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 public class DesignCircularQueue {
     int[] queue;

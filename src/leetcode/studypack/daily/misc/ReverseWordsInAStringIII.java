@@ -1,4 +1,4 @@
-package daily;
+package daily.misc;
 
 public class ReverseWordsInAStringIII {
     public void reverseWord(char[] sArray, int l, int h) {
