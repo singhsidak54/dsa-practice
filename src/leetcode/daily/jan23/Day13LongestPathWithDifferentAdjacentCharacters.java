@@ -3,7 +3,7 @@ package daily.jan23;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Day9LongestPathWithDifferentAdjacentCharacters {
+public class Day13LongestPathWithDifferentAdjacentCharacters {
     int ans;
     class Node {
         char label;
@@ -57,7 +57,7 @@ public class Day9LongestPathWithDifferentAdjacentCharacters {
     public static void main(String[] args) {
         int[] parent = {-1,0,0,1,1,2};
         String s = "abacbe";
-        Day9LongestPathWithDifferentAdjacentCharacters obj = new Day9LongestPathWithDifferentAdjacentCharacters();
+        Day13LongestPathWithDifferentAdjacentCharacters obj = new Day13LongestPathWithDifferentAdjacentCharacters();
         System.out.println(obj.longestPath(parent, s));
     }
 }

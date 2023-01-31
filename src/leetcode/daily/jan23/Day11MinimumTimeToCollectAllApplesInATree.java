@@ -3,7 +3,7 @@ package daily.jan23;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Day7MinimumTimeToCollectAllApplesInATree {
+public class Day11MinimumTimeToCollectAllApplesInATree {
     static int edgesUsed;
     public static boolean minTime(List<List<Integer>> neighbours, int vertex, List<Boolean> hasApple, boolean[] visited) {
         if(visited[vertex]) return false;

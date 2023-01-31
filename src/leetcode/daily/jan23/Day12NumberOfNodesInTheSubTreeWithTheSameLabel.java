@@ -2,7 +2,7 @@ package daily.jan23;
 
 import java.util.*;
 
-public class Day8NumberOfNodesInTheSubTreeWithTheSameLabel {
+public class Day12NumberOfNodesInTheSubTreeWithTheSameLabel {
     static int[] ans;
     public static void countSubTrees(List<List<Integer>> neighbours, int vertex, int parent, String labels, HashMap<Character, Set<Integer>> seenAt) {
         char label = labels.charAt(vertex);
