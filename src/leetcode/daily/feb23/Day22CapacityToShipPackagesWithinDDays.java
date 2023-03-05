@@ -1,6 +1,6 @@
 package daily.feb23;
 
-public class Day23CapacityToShipPackagesWithinDDays {
+public class Day22CapacityToShipPackagesWithinDDays {
     public int daysRequired(int[] weights, int maxWeight) {
         int days = 1, currWeight = 0;
         for(int i=0; i<weights.length; i++) {
